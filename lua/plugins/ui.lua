@@ -4,11 +4,22 @@ return {
   ----------------------
 
   -- Lunar theme
-  { "LunarVim/lunar.nvim" },
+  -- { "LunarVim/lunar.nvim" },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "lunar",
+  --   },
+  -- },
+  -- { "LunarVim/lunar.nvim" },
   {
-    "LazyVim/LazyVim",
+    "folke/tokyonight.nvim",
     opts = {
-      colorscheme = "lunar",
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        -- floats = "transparent", -- 浮动窗口半透明
+      },
     },
   },
 
