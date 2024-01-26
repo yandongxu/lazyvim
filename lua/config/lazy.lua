@@ -15,6 +15,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.linting.eslint" }, -- ESLint support
     { import = "lazyvim.plugins.extras.coding.codeium" }, -- Codeium support
     { import = "lazyvim.plugins.extras.util.project" }, -- Project support
+    { import = "lazyvim.plugins.extras.test.core" }, -- Testing support
+    { import = "lazyvim.plugins.extras.dap.core" }, -- DAP support
     -- { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins

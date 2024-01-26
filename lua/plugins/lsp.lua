@@ -9,6 +9,9 @@ return {
         "stylelint-lsp",
         "docker-compose-language-service", -- Docker compose
         "dockerfile-language-server", -- Docker
+
+        "node-debug2-adapter", -- DAP nodejs
+
         "stylua", -- Lua LSP
         "shellcheck", -- Shell
         "shfmt", -- Shell
