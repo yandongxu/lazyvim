@@ -23,4 +23,9 @@ return {
       },
     },
   },
+  -- Vim.surround
+  {
+    "kylechui/nvim-surround",
+    opts = {},
+  },
 }
