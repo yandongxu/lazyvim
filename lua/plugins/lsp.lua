@@ -7,6 +7,8 @@ return {
         "emmet-language-server",
         "vue-language-server",
         "stylelint-lsp",
+        "docker-compose-language-service", -- Docker compose
+        "dockerfile-language-server", -- Docker
         "stylua", -- Lua LSP
         "shellcheck", -- Shell
         "shfmt", -- Shell
