@@ -16,8 +16,9 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.coding.codeium" }, -- Codeium support
     { import = "lazyvim.plugins.extras.util.project" }, -- Project support
     { import = "lazyvim.plugins.extras.test.core" }, -- Testing support
+    -- { import = "lazyvim.plugins.extras.ui.edgy" }, -- Edgy layout support
     { import = "lazyvim.plugins.extras.dap.core" }, -- DAP support
-    { import = "lazyvim.plugins.extras.dap.nlua" }, -- DAP Lua support
+    { import = "lazyvim.plugins.extras.dap.nlua" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
