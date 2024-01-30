@@ -1,9 +1,12 @@
 return {
-  -- Prettier
   {
     "stevearc/conform.nvim",
     opts = {
+      -- Prettier
       formatters_by_ft = {
+        ["lua"] = { "stylua" },
+        ["sh"] = { "shfmt" },
+
         ["javascript"] = { "prettier" },
         ["javascriptreact"] = { "prettier" },
         ["typescript"] = { "prettier" },
@@ -22,10 +25,5 @@ return {
         ["handlebars"] = { "prettier" },
       },
     },
-  },
-  -- Vim.surround
-  {
-    "kylechui/nvim-surround",
-    opts = {},
   },
 }
