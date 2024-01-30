@@ -11,13 +11,14 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import any extras modules here
-    { import = "lazyvim.plugins.extras.lang.typescript" }, -- TypeScript support
-    { import = "lazyvim.plugins.extras.linting.eslint" }, -- ESLint support
-    { import = "lazyvim.plugins.extras.coding.codeium" }, -- Codeium support
-    { import = "lazyvim.plugins.extras.util.project" }, -- Project support
-    { import = "lazyvim.plugins.extras.test.core" }, -- Testing support
-    { import = "lazyvim.plugins.extras.dap.core" }, -- DAP support
-    { import = "lazyvim.plugins.extras.dap.nlua" }, -- DAP Lua support
+    { import = "lazyvim.plugins.extras.lang.typescript" }, -- TypeScript
+    { import = "lazyvim.plugins.extras.linting.eslint" }, -- ESLint
+    { import = "lazyvim.plugins.extras.coding.codeium" }, -- Codeium
+    { import = "lazyvim.plugins.extras.util.project" }, -- Project
+    { import = "lazyvim.plugins.extras.test.core" }, -- Testing
+    { import = "lazyvim.plugins.extras.dap.core" }, -- DAP
+    { import = "lazyvim.plugins.extras.dap.nlua" }, -- DAP Lua
+    { import = "lazyvim.plugins.extras.editor.symbols-outline" }, -- Symbols outline
     -- { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
