@@ -1,11 +1,12 @@
 return {
-  -- Lunar theme
-  { "LunarVim/lunar.nvim" },
+  -- { "LunarVim/lunar.nvim" }, Lunar
+  -- { "projekt0n/github-nvim-theme", }, Github
+  -- { "scottmckendry/cyberdream.nvim" }, -- Cyberdream
+
   -- {
   --   "LazyVim/LazyVim",
-  --   opts = {
-  --   },
-  --     colorscheme = "lunar",
+  --   colorscheme = "lunar",
+  --   opts = {},
   -- },
 
   -- Tokyonight theme config
@@ -14,7 +15,7 @@ return {
     "folke/tokyonight.nvim",
     lazy = true,
     opts = {
-      -- style = "moon",
+      style = "moon",
       transparent = true,
       styles = {
         sidebars = "transparent",
