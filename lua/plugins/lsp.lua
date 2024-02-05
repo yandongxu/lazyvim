@@ -9,6 +9,8 @@ return {
         "stylelint-lsp",
         "docker-compose-language-service", -- Docker compose
         "dockerfile-language-server", -- Docker
+        "css-lsp", -- CSS
+        "cssmodules-language-server", -- CSS module
         "json-lsp", -- JSON
 
         "stylua", -- Lua LSP
@@ -21,11 +23,15 @@ return {
   -- LSP
   {
     "neovim/nvim-lspconfig",
-    -- NOTE 使用 `eslint-plugin-pretter` 使用 `eslint` 修复错误，使用 `prettier` 格式化代码
     opts = {
+      -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
       servers = {
-        eslint = {},
-        -- Stylelint
+        -- Linter
+        eslint = {
+          settings = {
+            -- format = false,
+          },
+        },
         stylelint_lsp = {
           settings = {
             stylelintplus = {
@@ -42,15 +48,35 @@ return {
             "wxss",
           },
         },
-        -- JSON
+
+        -- Language
         jsonls = {
           init_options = {
             provideFormatter = false,
           },
           filetypes = { "json", "jsonc" },
         },
+        cssls = {
+          css = {
+            validate = true,
+            -- lint = {
+            --   unknownAtRules = "ignore",
+            --   unknownProperties = "ignore",
+            -- },
+          },
+          less = {
+            validate = true,
+          },
+          scss = {
+            validate = true,
+          },
+        },
+        -- CSS module
+        cssmodules_ls = {},
+        -- JSON
       },
       setup = {
+        -- NOTE 使用 `eslint-plugin-pretter` 使用 `eslint` 修复错误，使用 `prettier` 格式化代码
         eslint = function()
           require("lazyvim.util").lsp.on_attach(function(client)
             if client.name == "eslint" then
