@@ -9,6 +9,7 @@ return {
         "stylelint-lsp",
         "docker-compose-language-service", -- Docker compose
         "dockerfile-language-server", -- Docker
+        "json-lsp", -- JSON
 
         "stylua", -- Lua LSP
         "shellcheck", -- Shell
@@ -40,6 +41,13 @@ return {
             "vue",
             "wxss",
           },
+        },
+        -- JSON
+        jsonls = {
+          init_options = {
+            provideFormatter = false,
+          },
+          filetypes = { "json", "jsonc" },
         },
       },
       setup = {
