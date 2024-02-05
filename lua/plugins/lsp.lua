@@ -2,24 +2,25 @@ return {
   -- Mason
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
+    opts = function(_, opts)
+      opts.ensure_installed = opts.ensure_installed or {}
+      vim.list_extend(opts.ensure_installed, {
         "stylelint-lsp", -- Stylelint
         "vue-language-server", -- Volar
         "emmet-language-server", -- Emmet
-        "docker-compose-language-service", -- Docker compose
-        "dockerfile-language-server", -- Docker
         "css-lsp", -- CSS
         "cssmodules-language-server", -- CSS module
-        "json-lsp", -- JSON
         "prisma-language-server", -- Prisma
         "graphql-language-service-cli", -- GraphQL
 
         "stylua", -- Lua LSP
         "shellcheck", -- Shell
         "shfmt", -- Shell
-      },
-    },
+
+        "markdownlint", -- Markdown
+        "marksman",
+      })
+    end,
   },
 
   -- LSP
@@ -66,13 +67,6 @@ return {
         prismals = {},
         -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#graphql
         graphql = {},
-        -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls
-        jsonls = {
-          init_options = {
-            provideFormatter = false,
-          },
-          filetypes = { "json", "jsonc" },
-        },
         -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls
         cssls = {
           css = {
