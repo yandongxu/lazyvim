@@ -13,6 +13,8 @@ return {
         "cssmodules-language-server", -- CSS module
         "json-lsp", -- JSON
         "prisma-language-server", -- Prisma
+        -- "graphql-language-service-cli", -- GraphQL
+
         "stylua", -- Lua LSP
         "shellcheck", -- Shell
         "shfmt", -- Shell
@@ -51,6 +53,7 @@ return {
 
         -- Language
         prismals = {},
+        -- graphql = {},
         jsonls = {
           init_options = {
             provideFormatter = false,
