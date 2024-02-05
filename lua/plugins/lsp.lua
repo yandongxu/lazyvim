@@ -12,7 +12,7 @@ return {
         "css-lsp", -- CSS
         "cssmodules-language-server", -- CSS module
         "json-lsp", -- JSON
-
+        "prisma-language-server", -- Prisma
         "stylua", -- Lua LSP
         "shellcheck", -- Shell
         "shfmt", -- Shell
@@ -50,6 +50,7 @@ return {
         },
 
         -- Language
+        prismals = {},
         jsonls = {
           init_options = {
             provideFormatter = false,
@@ -71,9 +72,7 @@ return {
             validate = true,
           },
         },
-        -- CSS module
         cssmodules_ls = {},
-        -- JSON
       },
       setup = {
         -- NOTE 使用 `eslint-plugin-pretter` 使用 `eslint` 修复错误，使用 `prettier` 格式化代码
