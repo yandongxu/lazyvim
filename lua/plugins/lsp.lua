@@ -4,16 +4,16 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "emmet-language-server",
-        "vue-language-server",
-        "stylelint-lsp",
+        "stylelint-lsp", -- Stylelint
+        "vue-language-server", -- Volar
+        "emmet-language-server", -- Emmet
         "docker-compose-language-service", -- Docker compose
         "dockerfile-language-server", -- Docker
         "css-lsp", -- CSS
         "cssmodules-language-server", -- CSS module
         "json-lsp", -- JSON
         "prisma-language-server", -- Prisma
-        -- "graphql-language-service-cli", -- GraphQL
+        "graphql-language-service-cli", -- GraphQL
 
         "stylua", -- Lua LSP
         "shellcheck", -- Shell
@@ -28,12 +28,27 @@ return {
     opts = {
       -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
       servers = {
-        -- Linter
+        -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#emmet_language_server
+        emmet_language_server = {
+          filetypes = {
+            "html",
+            "htmldjango",
+            "javascriptreact",
+            "typescriptreact",
+            "vue",
+            "css",
+            "less",
+            "sass",
+            "scss",
+          },
+        },
+        -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
         eslint = {
           settings = {
             -- format = false,
           },
         },
+        -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#stylelint_lsp
         stylelint_lsp = {
           settings = {
             stylelintplus = {
@@ -41,25 +56,24 @@ return {
               autoFixOnSave = true,
             },
           },
-          filetypes = {
-            "css",
-            "less",
-            "scss",
-            "sugarss",
-            "vue",
-            "wxss",
-          },
+          filetypes = { "css", "less", "scss", "sugarss", "vue", "wxss" },
         },
-
-        -- Language
+        -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#volar
+        volar = {
+          filetypes = { "javascriptreact", "typescriptreact", "vue" },
+        },
+        -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#prismals
         prismals = {},
-        -- graphql = {},
+        -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#graphql
+        graphql = {},
+        -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls
         jsonls = {
           init_options = {
             provideFormatter = false,
           },
           filetypes = { "json", "jsonc" },
         },
+        -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls
         cssls = {
           css = {
             validate = true,
@@ -75,6 +89,7 @@ return {
             validate = true,
           },
         },
+        -- @doc https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssmodules_ls
         cssmodules_ls = {},
       },
       setup = {
