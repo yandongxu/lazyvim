@@ -24,6 +24,23 @@ return {
     opts = {
       servers = {
         eslint = {},
+        -- Stylelint
+        stylelint_lsp = {
+          settings = {
+            stylelintplus = {
+              autoFixOnFormat = true,
+              autoFixOnSave = true,
+            },
+          },
+          filetypes = {
+            "css",
+            "less",
+            "scss",
+            "sugarss",
+            "vue",
+            "wxss",
+          },
+        },
       },
       setup = {
         eslint = function()
