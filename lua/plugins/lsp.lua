@@ -12,6 +12,7 @@ return {
         "cssmodules-language-server", -- CSS module
         "prisma-language-server", -- Prisma
         "graphql-language-service-cli", -- GraphQL
+        "astro-language-server", -- Astro
 
         "stylua", -- Lua LSP
         "shellcheck", -- Shell
